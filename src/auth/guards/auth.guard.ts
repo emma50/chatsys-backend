@@ -26,7 +26,7 @@ export class AuthGuard implements CanActivate {
     try {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const tokenPayload = await this.jwtService.verifyAsync(token);
-      console.log('TokenPayload', tokenPayload);
+
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       request.user = {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
